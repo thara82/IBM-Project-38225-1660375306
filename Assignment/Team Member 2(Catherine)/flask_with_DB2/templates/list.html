@@ -1,0 +1,39 @@
+
+<html>
+    <body>
+        <a href="/">Home</a>
+        <a href="/addstudent">Add New Student</a>
+        <a href="/list">List Student</a>
+        <a href="/signup">Sign Up</a>
+        <br><hr>
+
+        {{msg}}
+
+        <table border="1">
+            <thead>
+                <td>Name</td>
+                <td>Address</td>
+                <td>City</td>
+                <td>Pincode</td>
+            </thead>
+
+            {%for row in students%}
+                <tr>
+                    <td>{{row["NAME"]}}</td>
+                    <td>{{row["ADDRESS"]}}</td>
+                    <td>{{row["CITY"]}}</td>
+                    <td>{{row["PIN"]}}</td>
+                </tr>
+            {%endfor%}
+        </table>
+
+        </body>
+    </html>
+        
+
+
+
+
+    </body>
+
+</html>
