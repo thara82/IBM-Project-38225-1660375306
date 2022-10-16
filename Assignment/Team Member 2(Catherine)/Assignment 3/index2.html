@@ -1,0 +1,24 @@
+<html>
+    <body>
+              <img src="https://cat26.s3.jp-tok.cloud-object-storage.appdomain.cloud/hos1.jpg" alt="Hospital1" >
+              <img src="https://cat26.s3.jp-tok.cloud-object-storage.appdomain.cloud/hos2.jpg" alt="Hospital2" >
+              <img src="https://cat26.s3.jp-tok.cloud-object-storage.appdomain.cloud/hos3.jpg"  alt="Hospital3" >
+              <img src="https://cat26.s3.jp-tok.cloud-object-storage.appdomain.cloud/hos4.png"  alt="Hospital4" >
+              <img src="https://cat26.s3.jp-tok.cloud-object-storage.appdomain.cloud/hos5.jpg" alt="Hospital5" >
+    
+    </body>
+</html>
+
+<script>
+  window.watsonAssistantChatOptions = {
+    integrationID: "e10fb421-bc1a-4bac-b90e-03d96712bbba", // The ID of this integration.
+    region: "jp-tok", // The region your integration is hosted in.
+    serviceInstanceID: "00c6cc4b-c8be-4cf0-b2f4-7647ad194ce4", // The ID of your service instance.
+    onLoad: function(instance) { instance.render(); }
+  };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+    document.head.appendChild(t);
+  });
+</script>
