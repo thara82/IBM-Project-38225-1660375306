@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+    {%block body%}
+        <a href="/">Home</a>
+        <a href="/addstudent">Add New Student</a>
+        <a href="/list">List Student</a>
+        <br><hr>
+
+        {{msg}}
+
+        <table class="table table-hover">
+            <thead>
+                <td scope="col">Name</td>
+                <td scope="col">Address</td>
+                <td scope="col">City</td>
+                <td scope="col">Pincode</td>
+            </thead>
+
+            {%for row in students%}
+                <tr>
+                    <td scope="row">{{row["NAME"]}}</td>
+                    <td scope="row">{{row["ADDRESS"]}}</td>
+                    <td scope="row">{{row["CITY"]}}</td>
+                    <td scope="row">{{row["PIN"]}}</td>                    
+                    <td scope="row"><a href="/delete/{{row['NAME']}}">Delete</a></td>
+                </tr>
+            {%endfor%}
+        </table>
+
+    {%endblock%}
+    
